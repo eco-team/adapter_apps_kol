@@ -1,0 +1,98 @@
+
+
+#contact {
+    .table th ,.table td {
+        padding-left: 50px;
+    }
+
+    .box {
+        padding-bottom: 0;
+    }
+
+
+    #contentFilter {
+        position: relative;
+
+        > div {
+            display: none;
+
+            &.open {
+                display: block;
+            }
+        }
+    }
+
+    .table-kolview {
+        margin-bottom: 1.5em;
+    }
+   .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+       padding: 16px 20px !important;
+   } 
+
+
+   #contentFilter #kol {
+       .collapse-table {
+           font-family: 'DB_Helvethaica_55_regular';
+           .action {
+                width: 130px;
+                text-align: left;
+
+                &.addcontact {
+                    a {
+                        color: #4091F7;
+                    }
+                }
+            }
+            .head {
+                .action {
+                    padding-left: 34px;
+                    padding-top: 25px;
+                }
+                .kolname {
+                    padding-top: 10px;
+                }
+            }
+    }
+    table {
+       
+       .kolphoto {
+            width: 40px;
+            padding: 15px 0 15px 15px !important;
+        }
+        .salename {
+            width: auto;
+            min-width: 250px;
+        }
+        .lineid {
+            width: 200px;
+        }
+        .mobile {
+            min-width: 200px;
+        }
+        .email {
+            width: 200px;
+        }
+        .creditterm {
+            width: 200px;
+        }
+        .action {
+            width: 130px;
+        }
+    }
+    .collapse-table>li {
+        margin-bottom: 30px;
+    }
+    .collapse-table>li>.detail {
+        display: block;
+    }
+    .collapse-table>li>.head {
+        cursor:default;
+    }
+}
+#contentFilter table {
+        td{
+            padding: 7px 20px !important;
+        }
+    }
+}
+

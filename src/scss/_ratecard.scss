@@ -1,0 +1,662 @@
+#RateCard {
+    #addnewratecard {
+        .form {
+            padding: 15px;
+        }
+    }    
+}
+
+
+  .popup#addnewkol {
+   
+    .row {
+      margin-bottom: 15px;
+
+      &.tags {
+        .col-12 ,.col-11 {
+          padding: 0 2px;
+          margin: 0;
+        }
+
+        div.vue-tags-input {           
+         display: block;
+          width: 100%;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #495057;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;   
+          
+           .ti-input{
+            border: 0;
+          }
+          .ti-item {          
+            
+
+            &.ti-selected-item {
+              div {
+              background: #bf1e2e;
+              color: #fff;}
+            }
+            }
+        }
+      }
+    }
+    .thumbnail-profile {
+      width: 70px;
+      height: 70px;      
+      display: block;     
+      position: relative;
+      cursor: pointer;
+      border: none !important;
+
+      &.require {
+        >div {
+            border: 1px solid #bf1e2e;
+        }
+      }
+
+      > div {
+        overflow: hidden;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #c4c4c4;
+        z-index: 1; 
+        border-radius: 35px;
+        border: 1px solid #fff;
+
+        img {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        input {
+            display: none;
+        }
+        >.fa {
+            position: absolute;
+            top: -14px;
+            left: -6px; 
+            font-size: 84px;
+            z-index: 2;       
+            
+        }
+      }
+
+      >.fa {
+        position: absolute;
+        bottom: 2px;
+        right: 0; 
+        font-size: 12px;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 35px;
+        width: 22px;
+        height: 22px;
+        color: white;   
+      }
+    }
+    .thumbnail-url{
+       width: 40px;
+      height: 40px;
+      background: #c4c4c4;
+      display: block;
+      margin-top:10px;
+      border-radius: 20px;
+    }
+    
+    .url {
+      display: inline-block;
+      width: 74%;
+       float: left;
+    } 
+    .fa {
+        float: left;
+        font-size: 24px;
+        line-height: 1;
+        margin-top: 6px;
+        color: #999;
+      }
+  }
+
+  #table-kolratecard {
+        .profile-img {
+              width: 40px;
+              height: 40px;
+              border-radius: 20px;
+              display: block;
+              overflow: hidden;
+          }
+      }
+
+.thumbnail-social{
+      width: 25px;
+      height: 25px;
+      background: url(../assets/images/default.png) no-repeat 50% 50% /100%; 
+      display: inline-block;
+      border-radius: 5px;
+      overflow: hidden; 
+      margin: 0 10px;
+      float: left;
+
+      &.facebook {
+       background: url(../assets/images/fb.png) no-repeat 50% 50% /100%; 
+      }
+      &.twitter {
+       background: url(../assets/images/twiter.png) no-repeat 50% 50% /100%; 
+      }
+      &.instagram {
+       background: url(../assets/images/ig.png) no-repeat 50% 50% /100%; 
+      } &.youtube {
+       background: url(../assets/images/youtube.png) no-repeat 50% 50% /100%; 
+      }
+      &.website {
+       background: url(../assets/images/web.png) no-repeat 50% 50% /100%; 
+      }
+     
+    }
+
+
+#tableKolContact .ant-table-thead > tr:first-child > th:last-child {
+  // width: 180px;
+}
+
+
+
+#tableKolContact {
+  .kolpic {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 25px;
+    overflow: hidden;   
+    background: #ccc; 
+  }
+}
+
+.tablebyplatform { 
+  thead {
+    display: none;
+  }
+  .thumbnail-social{
+    width: 25px;
+    height: 25px;;
+  }
+}
+
+
+#table {
+    display: table;
+    background: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border-radius: 4px 4px 0 0;
+
+    >.tr {
+        display: table-row;
+        padding: 5px;
+
+        > header {
+          width: 100%; 
+          display: table-row;          
+        }
+
+        .td , .th {
+          display: table-cell;
+          text-align: left;
+          vertical-align: middle;
+          border-bottom: 1px solid #e8e8e8;
+          transition: all 0.3s, border 0s;
+          padding: 16px;
+
+          &.icon {
+            width: 20px;         
+          }
+          &.photo {
+            width: 40px;
+            padding: 16px 0;
+          }
+          &.name {
+            width: 180px;
+          }
+                   
+      }
+      .th {
+            font-family: 'DB_Helvethaica_65_Medium';
+            background: #fafafa;
+            transition: background 0.3s ease;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.85);
+            font-weight: 500;
+            border-bottom: 1px solid #e8e8e8;
+          }
+    }        
+    
+    .clear {
+      clear: both;
+      width: 100%;
+    }
+}
+
+.kolpic {
+      width: 40px;
+      height: 40px;
+      display: block;
+      border-radius: 25px;
+      overflow: hidden;    
+      background: #ccc; 
+    }
+
+
+
+.jobsTable thead {
+  display: table-header-group;
+}
+
+td.action ,th.action {
+    width: 160px;
+}
+
+.tablebyplatform .ant-table-expanded-row-level-1 > td {
+  padding: 0 !important;
+}
+
+th,td {
+  padding: 16px 10px !important;
+}
+tr.ant-table-expanded-row td > .ant-table-wrapper {
+      margin: -16px -5px -17px;
+}
+#koltableRateCard td:nth-child(2) {
+  width: 100px !important;
+}
+table {
+  .jobno {
+    width: 100px;
+  }
+  .product {
+    width: 130px;
+  }
+  .scope {
+    width: 200px;   
+  }
+  .salename {
+    width: 250px;
+  }
+  .remark {
+    max-width: 250px;
+    min-width: 150px;
+  }
+  .cost {
+    // display: none;
+  }
+}
+.ant-table-fixed-left, .ant-table-fixed-left table {
+//  opacity: .5;
+//  background: red;
+//  padding: 0;
+}
+
+.ant-table-fixed-left {
+  // width: 700px !important;
+}
+
+.scroll-area {
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: 300px;
+}
+
+
+
+.table-header {
+  display: table;
+  width: 100%;
+
+    > div {
+      display: table-cell;
+      background: #fafafa;
+      transition: background 0.3s ease;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 16px 5px;
+      font-family: 'DB_Helvethaica_65_Medium';
+
+      &:first-of-type {
+        width: 96px;
+      }
+      &.td_kolname {
+        width: 260px;
+      } 
+      &.td_action {
+        width: 160px;
+      }
+    }
+}
+
+
+#ratecard .collapse-table {
+  font-size: 20px;
+
+    >li {
+      margin-bottom: 1px;
+
+      >.head {
+        display: table;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        color: #555;
+
+        >div {
+          
+          >.icon {
+            padding-top: 10px;
+          }
+          >.kolname {
+              padding-top: 12px;
+              width: 250px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+          } 
+          >.view {
+              padding-top: 12px;
+          } 
+          >.param {
+            padding-top: 5px;
+            padding-right: 30px;
+            padding-left: 0;
+
+            em, strong {
+              font-style: normal;
+              display: inline-block;
+              padding: 0 5px;
+            }
+            strong {
+              font-family: 'DB_Helvethaica_65_Medium';
+              font-weight: normal;
+              color: #333;
+            }
+          } 
+          >.url {
+            min-width: 150px;
+            padding-right: 10px;
+            a {
+              color: #1890ff;
+              display: inline-block;
+            }
+            .name {
+              padding-top: 5px;
+              padding-right: 20px;
+              display: inline-block;
+            }
+          }
+
+          &.action {
+          width: 160px;
+          text-align: left;
+          padding: 25px 10px 0;
+
+          &.addnew a{
+            color: #4091F7;
+          }
+
+          a {
+            padding: 0 10px 0;
+            display: inline-block;
+          }
+        }
+          
+        }
+        
+      }
+      >.detail {
+        padding: 0;
+
+      >.collapse-table {
+           > li {
+
+            >.head {
+              padding:  0 0 12px 26px;
+
+              .header-desc {
+                > span {
+
+                  &.icon {
+                    padding-top: 4px;
+                  }               
+                  
+                  
+                }
+              }
+            }
+            .detail {
+              .remark { white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+
+                .ant-btn {
+                  border: none;
+                  font-size: 90%;
+                 
+                  padding: 0;
+                  margin: 0;
+                  background: none !important;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .ant-table-selection-column {
+        padding-left: 67px !important;
+      }
+    }
+    .salename {
+      border-right: 1px solid #E7E7E7;
+    }
+}
+
+
+ .popup#addnewkol {
+   .ant-row.ant-form-item {
+    //  padding-bottom: 10px;
+   }
+   label {
+     padding-bottom: 10px;
+   }
+   .url-wrapper{
+     label {
+       padding-bottom: 0;
+     }
+     &.require {
+       border: none !important;
+
+       input {border: 1px solid #bf1e2e;}
+     }
+     &.ant-row {
+      padding-bottom: 10px;
+     }
+     .ant-row {
+       padding-bottom: 0;
+       margin-bottom: 0;
+     }
+     .ant-input {
+       font-size: 18px;
+     }
+     .dynamic-delete-button {
+      top: 0;
+
+      &.fa, &i {
+            margin-top: 0;
+      }
+    } 
+    }
+   .url-row {
+     padding: 0 0 10px;
+     margin: 0;
+
+     .label {
+       padding: 0;
+       margin: 0;
+       line-height: 1.5;
+     }
+
+     .ant-row {
+       margin-bottom: 0;
+     }       
+  }
+
+  .ant-form-explain {
+      padding-left: 0;
+      position: absolute;
+      font-size: 80%;
+      bottom: -5px;
+  }
+  .action-icon {
+    padding-top: 5px;
+
+    .fa {
+      margin: 0;
+    }
+
+    >div {
+      margin: 0;
+    }
+  }
+  .ant-form-item {
+    padding: 0;
+    margin: 0;
+  }
+  .kolname {
+    .ant-form-explain {
+      padding-left: 105px;
+      bottom: 0;
+  }
+  }
+}
+
+
+
+
+#ratecard .collapse-table>li.disabled>.head>.header-desc .icon {
+    cursor: default;
+
+    &:active {
+      pointer-events: none;
+    }
+}
+#ratecard .collapse-table>li.disabled>.head>.header-desc .icon {
+   opacity: .3;
+}
+
+.bt-addurl {
+  i {
+    background: #bf1e2e;
+    border-radius: 10px;
+    color: #fff;
+    padding: 2px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+.ti-selected-item {
+  background: #F9E9EA !important;
+  color: #333 !important;
+}
+
+.url-wrapper {
+  .ant-row.repeat {
+    .inputurl {
+      border-color: rgba(191,30,46,0.7);
+    }
+  }
+}
+
+#container #content #categoryListItem.require {
+  border: none;
+
+  label {
+    color: #bf1e2e;
+  }
+}
+
+.popup#contactbykolview {
+  > div {
+    width: 90%;
+    min-width: 800px;
+    max-width: 1200px;
+    padding: 0;
+    position: relative;
+    min-height: 50px;
+
+    h5 {
+      padding: 10px 40px;
+    }
+  }
+  table {
+    border-top: 1px solid #e8e8e8;
+    transition: all 0.3s, border 0s;
+  }
+  table .ant-table-thead>tr.ant-table-row-hover:not(.ant-table-expanded-row)>td, table .ant-table-tbody>tr.ant-table-row-hover:not(.ant-table-expanded-row)>td, table .ant-table-thead>tr:hover:not(.ant-table-expanded-row)>td, table .ant-table-tbody>tr:hover:not(.ant-table-expanded-row)>td {
+      background: #fff !important;
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+    padding: 5px 10px !important;
+
+    &.salename {
+      transition: all 0.3s, border 0s;
+      padding-left: 40px !important;
+    }
+    &.lineid {
+      width: 150px;
+    } 
+    &.email {
+      width: 200px;
+    }
+    &.mobile {
+      width: 160px;
+    }
+    &.creditterm {
+      width: 200px;
+    }
+    &.action {
+      width: 100px;
+    }
+
+    &.kolname {
+      padding-left: 40px !important;
+    }
+  }
+  .bt {
+    position: absolute; top: 10px; right: 20px;
+  }
+  
+
+}
+
+.opacity{
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.popup#contactbykolview {
+
+}

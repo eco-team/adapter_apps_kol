@@ -1,0 +1,309 @@
+#container >header {
+    background: #000;
+    box-sizing: border-box;
+    width: 100%; 
+    height: 72px;
+    z-index: 1;
+    padding: 12px;
+    position: relative;
+
+    .logout {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+    }
+
+    h1 {
+        background: url(//apps.adapterdigital.com/shares/images/interface/icon-logo@2x.png) no-repeat 50% 50%/100%;
+        float: left;
+        height: 100%;
+        width: 42px;
+        padding: 0;
+        margin: 0;
+    }
+    #nav {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 120%;
+
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 0 1em;
+            padding: 10px 10px;
+
+            a {
+                display: block;
+                color: #fff;
+
+                &:after {
+                    
+                    position: absolute;
+                    width: 100%;
+                    background: #b42d34;
+                    left: 0;
+                    bottom: 0;
+                    height: 4px;
+                    // border-radius: 5px;
+                }
+
+                &.active , &:hover {
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.lightbox-overlay {
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: 9999;
+    &.open {
+        height: auto;
+        opacity: 1; // transition: opacity .3s ease;
+    }
+    &.close {
+        height: auto;
+        opacity: 0; // transition: opacity .3s ease .0s;
+    }
+}
+
+$dotcolor: #bf1e2e;
+/* -- Loading thingy --*/
+
+
+.loading-dot {
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    background-color: $dotcolor;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    -webkit-animation: load 3s infinite linear;
+    -moz-animation: load 3s infinite linear;
+    -o-animation: load 3s infinite linear;
+    animation: load 3s infinite linear;
+}
+
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: translate(0px, 0px), rotate(0deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    25% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    50% {
+        box-shadow: 0px -40px 0px 0px $dotcolor, 0px 40px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    70% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+    }
+    75% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    80% {
+        -webkit-transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    85% {
+        -webkit-transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    90% {
+        -webkit-transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    95% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+}
+
+@-moz-keyframes load {
+    0% {
+        -moz-transform: translate(0px, 0px), rotate(0deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    25% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    50% {
+        box-shadow: 0px -40px 0px 0px $dotcolor, 0px 40px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    70% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+    }
+    75% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    80% {
+        -moz-transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    85% {
+        -moz-transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    90% {
+        -moz-transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    95% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: translate(0px, 0px), rotate(0deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    25% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    50% {
+        box-shadow: 0px -40px 0px 0px $dotcolor, 0px 40px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    70% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+    }
+    75% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    80% {
+        transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    85% {
+        transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    90% {
+        transform: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    95% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+}
+
+@-o-keyframes load {
+    0% {
+        -o-transforms: translate(0px, 0px), rotate(0deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    25% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    50% {
+        box-shadow: 0px -40px 0px 0px $dotcolor, 0px 40px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor;
+    }
+    70% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+    }
+    75% {
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    80% {
+        -o-transforms: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    85% {
+        -o-transforms: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 40px;
+        width: 40px;
+    }
+    90% {
+        -o-transforms: translate(0px, 0px) rotate(360deg);
+        box-shadow: 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor, 0px 0px 0px 0px $dotcolor;
+        background-color: $dotcolor;
+        height: 10px;
+        width: 10px;
+    }
+    95% {
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+    100% {
+        -o-transforms: rotate(360deg);
+        box-shadow: 0px 40px 0px 0px $dotcolor, 0px -40px 0px 0px $dotcolor, 40px 0px 0px 0px $dotcolor, -40px 0px 0px 0px $dotcolor, 40px 40px 0px 0px $dotcolor, -40px -40px 0px 0px $dotcolor, 40px -40px 0px 0px $dotcolor, -40px 40px 0px 0px $dotcolor;
+    }
+}

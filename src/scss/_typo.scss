@@ -1,0 +1,16 @@
+@font-face {
+      @include font-face(
+        "DB_Helvethaica_65_Medium",
+        "../assets/fonts/65medium/",
+        "65medium"
+      );
+    }
+
+@font-face {
+  @include font-face(
+    "DB_Helvethaica_55_regular",
+    "../assets/fonts/55regular/",
+    "55regular"
+  );
+}
+

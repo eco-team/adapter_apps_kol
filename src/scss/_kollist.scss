@@ -1,0 +1,291 @@
+
+
+#kollist {     
+    .box {
+        padding-bottom: 0;
+    }
+
+    .dataFilter {
+        position: relative;
+
+        > div {
+            display: none;
+
+        }
+    }
+
+.popup.export .ant-row {
+    &>div {
+        padding-bottom: 10px;
+    }
+}
+
+.ant-collapse {
+    border: 0;
+     font-family: 'DB_Helvethaica_65_Medium';
+
+    >.ant-collapse-item {
+        border: 0;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+        background: #fff;
+        margin-bottom: 1px;
+
+        >.ant-collapse-header {
+            font-family: 'DB_Helvethaica_65_Medium';
+            font-size: 22px;
+                color: rgba(85, 85, 85, 0.85);
+
+            i {
+                margin: 0 10px
+            }
+
+            span {
+                display: inline-block; 
+                margin-right: 1.5em;
+
+                &.head {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 150px;
+                }
+
+                &.desc {
+                    font-family: 'DB_Helvethaica_55_regular';
+                    font-size: 80%;
+                    color: #939393;
+                }
+            }
+        }
+        
+        .ant-collapse-content {
+            border-top:1px solid #e7e7e7;
+        }
+        .ant-collapse-content-box {
+            padding: 0;
+        }
+        .action {
+            float: right;
+        }
+    }
+}   
+   
+
+    #footer-page {        
+        .btn {
+            position: relative;
+            overflow: initial;
+            > div {
+                position: absolute;
+                bottom: 40px;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+                width: 150%;
+                left: -25%;;
+                color: #333;
+                font-size: 110%;     
+                display: none;          
+
+                > a ,ul {
+                    padding: 10px;
+                    display: inline-block;
+                    width: 100%;
+
+                }
+                 > a {
+                    border-bottom: 1px solid #ccc;
+                    padding: 10px;
+                    font-size: 120%;
+                }
+
+                ul {
+                    padding: 0 0 10px;
+                    margin: 0;
+                    list-style: none;   
+
+                    li {
+                        padding: 5px 10px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
+                    }              
+                }
+            }
+        }
+    }
+
+    .popup.export {
+        .form-export {
+            padding: 10px 0;
+        }
+    }
+
+    .popup {
+        > div {
+            padding: 1.5em;
+        }
+        .form {
+            border: 0;
+            padding: 0;
+        }
+    }
+    table .remark {
+        max-width: 200px;
+        min-width: 100px;
+    }
+}
+
+
+.collapse-table {
+    list-style: none;
+    > li {
+        padding:0;
+        border: 0;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+        background: #fff;
+        margin-bottom: 10px;
+
+        > .head {
+            line-height: 22px;            
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+            clear: both;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+
+            > div {
+                display: block;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                padding: 15px 0 0 15px;
+                
+                .icon {
+                    font-size: 15px;
+                }
+
+                 &.action {
+                    width: 15%;
+                    min-width: 60px;
+                    float: right;
+                    text-align: right;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 15px;
+
+                    i {
+                        padding: 5px;
+                        color: #999;
+                        cursor: pointer;
+                    }
+                }
+                 > span {
+                    display: block;
+                    margin: 0 15px 15px 0;
+                    float: left;
+
+                    &.icon {
+                        width: 15px;
+                        padding: 0;
+
+                         &.down {
+                            display: none;
+                        }
+                        &.right {
+                            display: block;
+                        }
+                    }
+                    &.folder-open {
+                        width: 30px;
+                    }
+
+                    &.foldername {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 30%;    
+                        max-width: 150px;                
+                    }
+
+                    &.description {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width:  40%;
+                        color: #939393;
+                        font-size: 18px;
+                    }
+                
+                }
+            }          
+        }
+
+        >.detail {
+            display: none;           
+        }
+
+         &.open {
+             
+             >.head {
+
+               >div { 
+                   >span {
+                        &.down {
+                            display: block;
+                        }
+                        &.right {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            >.detail {
+                display: block;
+            }
+        }
+
+        &.disabled {
+            >.head {
+                >.header-desc {
+                    .icon {
+                        cursor: not-allowed;opacity: .3;
+
+                        &:active {
+                            pointer-events: none;
+                        }
+                    }
+                }              
+                
+
+                .icon {
+                    &.down {
+                         display: none;
+                    }
+                    &.right {
+                        display: block;
+                    }
+                }
+            }
+            >.detail {
+                display: none;
+            }
+           
+        }        
+        
+    }   
+    
+}
+
+
+// .collapse-table > li:not(.disabled):first-child,
+// .collapse-table > li.disabled + li:not(.disabled) {
+//   .detail {
+//       display: block;
+//   }
+// }
+
+
